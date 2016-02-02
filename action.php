@@ -19,7 +19,7 @@ class action_plugin_deniedpage extends DokuWiki_Action_Plugin {
     /**
      * Register its handlers with the dokuwiki's event controller
      */
-    public function register(Doku_Event_Handler &$controller) {
+    public function register(Doku_Event_Handler $controller) {
        $controller->register_hook('ACTION_HEADERS_SEND', 'BEFORE', $this, 'handle_action_headers_send');
     }
 
